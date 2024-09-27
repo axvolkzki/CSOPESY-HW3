@@ -1,0 +1,213 @@
+﻿  BaseScreen.cpp
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,29): error C2065: 'Process': undeclared identifier
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,18): error C2923: 'std::shared_ptr': 'Process' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'BaseScreen.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,29):
+      see declaration of 'Process'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,18): error C2065: 'Process': undeclared identifier
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,7): error C2923: 'std::shared_ptr': 'Process' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'BaseScreen.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,18):
+      see declaration of 'Process'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,14): error C2146: syntax error: missing ';' before identifier 'MAIN_CONSOLE'
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,27): error C2059: syntax error: '='
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2923: 'std::unordered_map': 'String' is not a valid template type argument for parameter '_Kty'
+  (compiling source file 'BaseScreen.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,7):
+      see declaration of 'String'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2976: 'std::unordered_map': too few template arguments
+  (compiling source file 'BaseScreen.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(27,22): error C2061: syntax error: identifier 'String'
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(28,26): error C2061: syntax error: identifier 'String'
+  (compiling source file 'BaseScreen.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(41,16): error C2512: 'std::unordered_map': no appropriate default constructor available
+  (compiling source file 'BaseScreen.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(8,40): error C2065: 'Process': undeclared identifier
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(8,29): error C2923: 'std::shared_ptr': 'Process' is not a valid template type argument for parameter '_Ty'
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(8,40):
+      see declaration of 'Process'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(10,1): error C2512: 'AConsole': no appropriate default constructor available
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\AConsole.h(4,7):
+      see declaration of 'AConsole'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(51,9): error C2451: a conditional expression of type 'const std::shared_ptr' is not valid
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(51,9):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(53,42): error C2675: unary '->': 'const std::shared_ptr' does not define this operator or a conversion to a type acceptable to the predefined operator
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1767,22):
+      could be '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'
+          C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(53,42):
+          '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': could not deduce template argument for '__formal'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.cpp(53,59): error C2039: 'getInfo': is not a member of 'std::shared_ptr'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      see declaration of 'std::shared_ptr'
+  
+  ConsoleManager.cpp
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,14): error C2146: syntax error: missing ';' before identifier 'MAIN_CONSOLE'
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,27): error C2059: syntax error: '='
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2923: 'std::unordered_map': 'String' is not a valid template type argument for parameter '_Kty'
+  (compiling source file 'ConsoleManager.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,7):
+      see declaration of 'String'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2976: 'std::unordered_map': too few template arguments
+  (compiling source file 'ConsoleManager.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,38): error C2065: 'BaseScreen': undeclared identifier
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,27): error C2923: 'std::shared_ptr': 'BaseScreen' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'ConsoleManager.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,38):
+      see declaration of 'BaseScreen'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(27,22): error C2061: syntax error: identifier 'String'
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(28,26): error C2061: syntax error: identifier 'String'
+  (compiling source file 'ConsoleManager.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(41,16): error C2512: 'std::unordered_map': no appropriate default constructor available
+  (compiling source file 'ConsoleManager.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(65,22): error C2761: 'void ConsoleManager::switchConsole(void) const': redeclaration of member is not allowed
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(65,43): error C2146: syntax error: missing ')' before identifier 'consoleName'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(66,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(66,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(80,53): error C2065: 'BaseScreen': undeclared identifier
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(80,42): error C2923: 'std::shared_ptr': 'BaseScreen' is not a valid template type argument for parameter '_Ty'
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(80,53):
+      see declaration of 'BaseScreen'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(82,25): error C2039: 'contains': is not a member of 'std::unordered_map'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(82,34): error C2675: unary '->': 'std::shared_ptr' does not define this operator or a conversion to a type acceptable to the predefined operator
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1767,22):
+      could be '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'
+          C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(82,34):
+          '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': could not deduce template argument for '__formal'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(82,51): error C2039: 'getName': is not a member of 'std::shared_ptr'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      see declaration of 'std::shared_ptr'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(88,21): error C2675: unary '->': 'std::shared_ptr' does not define this operator or a conversion to a type acceptable to the predefined operator
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1767,22):
+      could be '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const'
+          C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(88,21):
+          '_Ty2 *std::shared_ptr<_Ty>::operator ->(void) noexcept const': could not deduce template argument for '__formal'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(88,38): error C2039: 'getName': is not a member of 'std::shared_ptr'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      see declaration of 'std::shared_ptr'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(92,22): error C2761: 'void ConsoleManager::switchToScreen(void)': redeclaration of member is not allowed
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(92,44): error C2146: syntax error: missing ')' before identifier 'screenName'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(93,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(93,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(105,22): error C2761: 'void ConsoleManager::unregisteredScreen(void)': redeclaration of member is not allowed
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(105,48): error C2146: syntax error: missing ')' before identifier 'screenName'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(106,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(106,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(120,1): error C2512: 'std::unordered_map': no appropriate default constructor available
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(129,22): error C2065: 'MAIN_CONSOLE': undeclared identifier
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.cpp(131,22): error C2065: 'MAIN_CONSOLE': undeclared identifier
+  main.cpp
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,14): error C2146: syntax error: missing ';' before identifier 'MAIN_CONSOLE'
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,27): error C2059: syntax error: '='
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2923: 'std::unordered_map': 'String' is not a valid template type argument for parameter '_Kty'
+  (compiling source file 'main.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(11,7):
+      see declaration of 'String'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(16,15): error C2976: 'std::unordered_map': too few template arguments
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,38): error C2065: 'BaseScreen': undeclared identifier
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,27): error C2923: 'std::shared_ptr': 'BaseScreen' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'main.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(26,38):
+      see declaration of 'BaseScreen'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(27,22): error C2061: syntax error: identifier 'String'
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(28,26): error C2061: syntax error: identifier 'String'
+  (compiling source file 'main.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\ConsoleManager.h(41,16): error C2512: 'std::unordered_map': no appropriate default constructor available
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\unordered_map(61,7):
+      see declaration of 'std::unordered_map'
+  
+  Process.cpp
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,29): error C2065: 'Process': undeclared identifier
+  (compiling source file 'Process.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,18): error C2923: 'std::shared_ptr': 'Process' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'Process.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(11,29):
+      see declaration of 'Process'
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,18): error C2065: 'Process': undeclared identifier
+  (compiling source file 'Process.cpp')
+  
+C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,7): error C2923: 'std::shared_ptr': 'Process' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'Process.cpp')
+      C:\Users\AJ\OneDrive\Desktop\GithubProjects\CSOPESY\CSOPESY-HW3\BaseScreen.h(18,18):
+      see declaration of 'Process'
+  
+  Generating Code...
