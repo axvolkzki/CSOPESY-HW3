@@ -1,12 +1,12 @@
-﻿#include "AConsole.h"
-#include <string>
+#include "AConsole.h"
 
-AConsole::AConsole(String name)
+// Constructor
+AConsole::AConsole(String name) : name(name)
 {
-	this->name = name;
 }
 
-AConsole::String AConsole::getName()
+// Returns the name of the console
+String AConsole::getName()
 {
-	return this->name;
+	return name;
 }

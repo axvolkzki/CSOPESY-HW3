@@ -1,55 +1,26 @@
-/*
-* CSOPESY - S11
-* Group 13	: Abenoja, Amelia Joyce
-*			: Cuales, Bianca Mari
-*			: Culala, Mary Erika
-*			: Uy, Gleezell Vina
-*
-* Week 3 - Group Homework - Designing console layouts
-* Last modified: 09/27/2024
-*/
-
-
-#include <iostream>
-#include <windows.h>
-
 #include "ConsoleManager.h"
-#include "MainConsole.h"
 
 using namespace std;
 
+int main() {
+	ConsoleManager::initialize();												// Initialize the instance of ConsoleManager	
 
-// col x rows
-//void SetConsoleWindowSize(int width, int height)
-//{
-//	const HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-//	const COORD newSize = { static_cast<short>(width), static_cast<short>(height) };
-//	SetConsoleScreenBufferSize(hConsole, newSize);
-//
-//	const SMALL_RECT rect = { 0, 0, newSize.X - 1, newSize.Y - 1 };
-//	SetConsoleWindowInfo(hConsole, TRUE, &rect);
-//}
-
-
-
-int main()
-{
-	ConsoleManager::initializeInstance();
-
+	// Variables
 	bool running = true;
 
-	while(running)
-	{
-		ConsoleManager::getInstance()->process();
-		ConsoleManager::getInstance()->drawConsole();
+	// Main loop
+	while (running) {
 
+		ConsoleManager::getInstance()->process();								// contains handling of logic and other non-drawing operations; call its instance
+		ConsoleManager::getInstance()->drawConsole();							// refreshes the screen with the updated information
 
+		// Check if still running
 		running = ConsoleManager::getInstance()->isRunning();
 	}
 
 
-	
-	// Destroy all the instances
-	ConsoleManager::destroyInstance();
+	// Clean up by destroying the instance of ConsoleManager
+	ConsoleManager::destroy();
+
 	return 0;
 }

@@ -1,156 +1,126 @@
-﻿#include "ConsoleManager.h"
+#include "ConsoleManager.h"
 
 #include <iostream>
-#include <string>
+
 #include "MainConsole.h"
 
 
-ConsoleManager* ConsoleManager::sharedInstance = nullptr;
-ConsoleManager* ConsoleManager::getInstance()
-{
-//	if (instance == nullptr) {
-//		initializeInstance();
-//	}
+ConsoleManager* ConsoleManager::sharedInstance = nullptr;				// Initialize the instance of ConsoleManager
+
+ConsoleManager* ConsoleManager::getInstance() {							// Singleton pattern; actual pointer
 	return sharedInstance;
 }
 
-void ConsoleManager::initializeInstance()
-{
-	/*if (sharedInstance == nullptr) {
-		sharedInstance = new ConsoleManager();
-	}*/
-	sharedInstance = new ConsoleManager();
+void ConsoleManager::initialize() {
+	sharedInstance = new ConsoleManager();								// Initialize the instance of ConsoleManager
 }
 
-void ConsoleManager::destroyInstance()
-{
-	/*if (sharedInstance != nullptr) {
-		delete sharedInstance;
-		sharedInstance = nullptr;
-	}*/
-	delete sharedInstance;
+void ConsoleManager::destroy() {
+	delete sharedInstance;												// Destroy the instance of ConsoleManager
 }
 
-void ConsoleManager::drawConsole() const
-{
-	std::cout << "Drawing console...\n";
-
+void ConsoleManager::drawConsole() const {
 	if (this->currentConsole != nullptr) {
 		this->currentConsole->display();
 	}
 	else {
-		std::cerr << "There is no existing console to display. Please check\n";
+		std::cerr << "No console to display. Please check." << std::endl;
 	}
 }
 
-void ConsoleManager::process() const
-{
-	/*std::string command;
-	std::cout << "Enter a command: ";
-	std::cin >> command;
-	if (MainConsole::isCommandValid(command)) {
-		MainConsole::commandRecognize(command);
-	}
-	else {
-		std::cout << "Command not recognized. \n";
-	}*/
+void ConsoleManager::process() const {
 	if (this->currentConsole != nullptr) {
 		this->currentConsole->process();
 	}
 	else {
-		std::cerr << "There is no existing console to process. Please check\n";
+		std::cerr << "No console to process. Please check." << std::endl;
 	}
 }
 
-void ConsoleManager::switchConsole(String consoleName) const
-{
-	if(this->consoleTable.contains(consoleName))
-	{
-		system("cls");
-		this->previousConsole = this->currentConsole;
-		this->currentConsole = this->consoleTable[consoleName];
-		this->currentConsole->onEnabled();
+void ConsoleManager::switchConsole(String consoleName) {
+	if (this->consoleTable.contains(consoleName)) {
+		system("cls");												// Clear the screen
+		this->previousConsole = this->currentConsole;				// Set the previous console to the current console
+		this->currentConsole = this->consoleTable[consoleName];		// Set the current console to the specified console
+		this->currentConsole->onEnabled();							// Call the onEnabled function of the current console
 	}
-	else
-	{
-		std::cerr << "The console name is not found in the table. Please check\n";
+	else {
+		std::cerr << "Console name " << consoleName << " not found. Please check if it is initialized." << std::endl;
 	}
 }
 
-void ConsoleManager::registerScreen(std::shared_ptr<BaseScreen> screenReference)
-{
-	if (this->consoleTable.contains(screenReference->getName()))
-	{
-		std::cerr << "The screen name is already registered. Please check\n";
+void ConsoleManager::registerScreen(std::shared_ptr<BaseScreen> screenRef) {			// stores the screen to the console table
+	if (this->consoleTable.contains(screenRef->getName())) {
+		std::cerr << "Screen name " << screenRef->getName() << " already exists. Please user another name." << std::endl;
 		return;
 	}
 
-	this->consoleTable[screenReference->getName()] = screenReference;
+	this->consoleTable[screenRef->getName()] = screenRef;
 }
 
-
-void ConsoleManager::switchToScreen(String screenName)
-{
-	if (this->consoleTable.contains(screenName))
-	{
-		this->switchConsole(screenName);
+void ConsoleManager::switchToScreen(String screenName) {			// switches to the specified screen
+	if (this->consoleTable.contains(screenName)) {
+		system("cls");												// Clear the screen
+		this->previousConsole = this->currentConsole;				// Set the previous console to the current console
+		this->currentConsole = this->consoleTable[screenName];		// Set the current console to the specified console
+		this->currentConsole->onEnabled();							// Call the onEnabled function of the current console
 	}
-	else
-	{
-		std::cerr << "The screen name is not found in the table. Please check\n";
+	else {
+		std::cerr << "Screen name " << screenName << " not found. Please check if it is initialized." << std::endl;
 	}
 }
 
-
-void ConsoleManager::unregisteredScreen(String screenName)
-{
-	if (this->consoleTable.contains(screenName))
-	{
+void ConsoleManager::unregisterScreen(String screenName) {
+	if (this->consoleTable.contains(screenName)) {
 		this->consoleTable.erase(screenName);
 	}
-	else
-	{
-		std::cerr << "The screen name is not found in the table. Please check\n";
+	else {
+		std::cerr << "Unable to unregister screen name " << screenName << " since it was not found. Please check if it is registered." << std::endl;
 	}
 }
-
 
 // Constructor
 ConsoleManager::ConsoleManager()
 {
-	this->running = true;
+	this->running = true;											// Set the running variable to true
+	this->consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);			// Get the console handle; initialize consoles
 
-	// initialize the main console
-	this->consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-
+	// Initialize the consoles
 	const std::shared_ptr<MainConsole> mainConsole = std::make_shared<MainConsole>();
 
+	this->consoleTable[MAIN_CONSOLE] = mainConsole;					// Add the main console to the console table
 
-	this->consoleHandle[MAIN_CONSOLE] = mainConsole;
-
-	this->switchConsole(MAIN_CONSOLE);			// first console to be displayed is the main menu
+	this->switchConsole(MAIN_CONSOLE);								// Switch to the main console since it is the first console to be displayed; main menu
 }
 
-void ConsoleManager::returnToPreviousConsole()
-{
-	if (this->previousConsole != nullptr)
-	{
-		this->currentConsole = this->previousConsole;
-		this->previousConsole = nullptr;
+
+void ConsoleManager::returnToPreviousConsole() {
+	if (this->previousConsole != nullptr) {
+		//system("cls");												// Clear the screen
+		this->currentConsole = this->previousConsole;				// Set the current console to the previous console
+		this->previousConsole = nullptr;							// Set the previous console to null
+		//this->currentConsole->onEnabled();							// Call the onEnabled function of the current console
 	}
-	else
-	{
-		std::cerr << "There is no previous console to return to. Please check\n";
+	else {
+		std::cerr << "No previous console to return to. Please check." << std::endl;
 	}
 }
 
-
-void ConsoleManager::exitApplication()
-{
-	this->running = false;
+void ConsoleManager::exitApplication() {
+	this->running = false;											// Set the running variable to false
 }
 
-bool ConsoleManager::isRunning() const
-{
-	return this->running;
+bool ConsoleManager::isRunning() const {
+	return this->running;											// Returns the value of the running variable
+}
+
+HANDLE ConsoleManager::getConsoleHandle() const {
+	return this->consoleHandle;									// Returns the console handle
+}
+
+void ConsoleManager::setCursorPosition(int posX, int posY) const {
+	COORD coord;
+	coord.X = posX;
+	coord.Y = posY;
+	SetConsoleCursorPosition(this->consoleHandle, coord);
 }
